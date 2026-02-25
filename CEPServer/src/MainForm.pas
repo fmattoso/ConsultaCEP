@@ -1,0 +1,35 @@
+unit MainForm;
+
+interface
+
+uses Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  IPPeerServer,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.StdCtrls;
+
+type
+  TFrmMain = class(TForm)
+    Label1: TLabel;
+    Label2: TLabel;
+    btnFechar: TButton;
+    procedure btnFecharClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmMain: TFrmMain;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFrmMain.btnFecharClick(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+end.
+

@@ -113,14 +113,14 @@
         <DCCReference Include="src\service\ApiCep_Provider.pas"/>
         <DCCReference Include="src\service\AwesomeCep_Provider.pas"/>
         <DCCReference Include="src\controller\Cep_Controller.pas"/>
-        <DCCReference Include="src\ServerContainerUnit1.pas">
+        <DCCReference Include="src\ServerContainer.pas">
             <Form>ServerContainer1</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="src\ServerMethodsUnit1.pas"/>
-        <DCCReference Include="src\Unit1.pas">
-            <Form>Form1</Form>
+        <DCCReference Include="src\ServerMethods.pas"/>
+        <DCCReference Include="src\MainForm.pas">
+            <Form>FrmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">

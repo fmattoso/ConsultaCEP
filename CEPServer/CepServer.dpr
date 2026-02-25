@@ -13,16 +13,16 @@ uses
   ApiCep_Provider in 'src\service\ApiCep_Provider.pas',
   AwesomeCep_Provider in 'src\service\AwesomeCep_Provider.pas',
   Cep_Controller in 'src\controller\Cep_Controller.pas',
-  ServerContainerUnit1 in 'src\ServerContainerUnit1.pas' {ServerContainer1: TDataModule},
-  ServerMethodsUnit1 in 'src\ServerMethodsUnit1.pas',
-  Unit1 in 'src\Unit1.pas' {Form1};
+  ServerContainer in 'src\ServerContainer.pas' {ServerContainer1: TDataModule},
+  ServerMethods in 'src\ServerMethods.pas',
+  MainForm in 'src\MainForm.pas' {FrmMain};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TFrmMain, FrmMain);
   Application.CreateForm(TServerContainer1, ServerContainer1);
   Application.Run;
 end.
