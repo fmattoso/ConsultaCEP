@@ -39,6 +39,7 @@ begin
 
     // Questão do Snap encapsular o retorno com "result": []
     Result := ExtrairResult(Resp.ContentAsString());
+//    Result := Resp.ContentAsString();
   finally
     Http.Free;
   end;
