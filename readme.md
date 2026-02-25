@@ -1,8 +1,8 @@
 ## Busca CEP 
-# Ferramentas utilizadas
+### Ferramentas utilizadas
 - RAD Delphi 11
 - DataSnap + WebBroker
-# Rquisitos
+### Rquisitos
 Temos um novo projeto na empresa, onde precisaremos disponibilizar ao usuário do nosso sistema acessar informações
 de endereço de um determinado CEP.
 Para isso, podemos contar com a api de viacep (https://viacep.com.br/) que nos retorna essa informação.
