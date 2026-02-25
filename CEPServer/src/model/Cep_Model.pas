@@ -1,0 +1,42 @@
+unit Cep_Model;
+
+interface
+
+uses
+  System.SysUtils, System.RegularExpressions, CepService_Interface;
+
+type
+  TCepModel = class
+  private
+    FService: ICepService;
+    function ValidarCep(const ACep: string): string;
+  public
+    constructor Create(const AService: ICepService);
+    function Consultar(const ACep: string): string;
+  end;
+
+implementation
+
+constructor TCepModel.Create(const AService: ICepService);
+begin
+  FService := AService;
+end;
+
+function TCepModel.ValidarCep(const ACep: string): string;
+var
+  L: string;
+begin
+  L := ACep.Replace('-', '');
+
+  if not TRegEx.IsMatch(L, '^\d{8}$') then
+   raise Exception.Create('CEP Inválido');
+
+  Result := L;
+end;
+
+function TCepModel.Consultar(const ACep: string): string;
+begin
+  Result := FService.ConsultarCep(ACep);
+end;
+
+end.

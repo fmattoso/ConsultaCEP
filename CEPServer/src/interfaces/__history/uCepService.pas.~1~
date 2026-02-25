@@ -1,0 +1,12 @@
+unit iCepService;
+
+interface
+
+type
+  ICepService = interface
+    ['{BBF4094A-47A1-45E6-AF22-D1E56E832A23}']
+    function ConsultarCep(const ACep: string): string;
+  end;
+implementation
+
+end.

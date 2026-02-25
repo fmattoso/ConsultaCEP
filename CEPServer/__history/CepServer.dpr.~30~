@@ -1,0 +1,28 @@
+program CepServer;
+
+uses
+  Vcl.Forms,
+  Web.WebReq,
+  IdHTTPWebBrokerBridge,
+  CepProvider_Interface in 'src\interfaces\CepProvider_Interface.pas',
+  CepService_Interface in 'src\interfaces\CepService_Interface.pas',
+  Endereco in 'src\model\Endereco.pas',
+  Cep_Model in 'src\model\Cep_Model.pas',
+  Cep_Service in 'src\service\Cep_Service.pas',
+  ViaCep_Provider in 'src\service\ViaCep_Provider.pas',
+  ApiCep_Provider in 'src\service\ApiCep_Provider.pas',
+  AwesomeCep_Provider in 'src\service\AwesomeCep_Provider.pas',
+  Cep_Controller in 'src\controller\Cep_Controller.pas',
+  ServerContainerUnit1 in 'src\ServerContainerUnit1.pas' {ServerContainer1: TDataModule},
+  ServerMethodsUnit1 in 'src\ServerMethodsUnit1.pas',
+  Unit1 in 'src\Unit1.pas' {FrmMain};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TServerContainer1, ServerContainer1);
+  Application.CreateForm(TFrmMain, FrmMain);
+  Application.Run;
+end.

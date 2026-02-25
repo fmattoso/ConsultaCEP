@@ -1,0 +1,20 @@
+unit Cep_Service;
+
+interface
+
+uses
+  System.SysUtils, System.Generics.Collections,
+  CepService_Interface, CepProvider_Interface;
+
+type
+  TCepService = class(TInterfacedObject, ICepService)
+  private
+    FProviders: TObjectList<ICepProvider>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    function ConsultarCep(const ACep: string): string;
+  end;
+implementation
+
+end.

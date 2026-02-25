@@ -1,0 +1,18 @@
+unit WebModule;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Web.HTTPApp, DataSnap.DSHTTPWebBroker,
+  DataSnap.DSServer, DataSnap.DSAuth;
+
+type
+  TWebModule = class(TWebModule)
+    DSHTTPWebDispatcher: TDSHTTPWebDispatcher;
+    DSServer: TDSServer;
+  end;
+
+
+implementation
+
+end.

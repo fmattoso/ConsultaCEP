@@ -1,0 +1,47 @@
+unit ServerMethods_dm;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Cep_Controller;
+
+type
+  TServerMethods = class(TDataModule)
+  private
+    { Private declarations }
+    FCepController: TCepController;
+  public
+    { Public declarations }
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
+
+    function ConsultarCep(const ACep: string): string;
+  end;
+
+var
+  ServerMethods: TServerMethods;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+constructor TServerMethods.Create(AOwner: TComponent);
+begin
+  inherited;
+  FCepController := TCepController.Create;
+end;
+
+destructor TServerMethods.Destroy;
+begin
+  FController.Free;
+  inherited;
+end;
+
+function TServerMethods.ConsultarCep(const ACep: string): string;
+begin
+  Result := FCepController.ConsultarCep(ACep);
+end;
+
+end.

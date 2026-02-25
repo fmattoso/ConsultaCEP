@@ -1,0 +1,22 @@
+unit Cep_Controller;
+
+interface
+
+uses
+  CepService_Interface, Cep_Model, Cep_Service, System.SysUtils;
+
+type
+  TCepController = class
+  private
+    FService: ICepService;
+    FModel: TCepModel;
+  public
+    constructor Create;
+    destructor Destroy; override;
+
+    function ConsultarCep(const ACep: string): string;
+  end;
+
+implementation
+
+end.

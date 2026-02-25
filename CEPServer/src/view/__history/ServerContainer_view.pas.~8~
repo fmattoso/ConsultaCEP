@@ -1,0 +1,54 @@
+unit ServerContainer_view;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, IPPeerServer, Datasnap.DSCommonServer,
+  Datasnap.DSServer, Datasnap.DSHTTP, Vcl.StdCtrls;
+
+type
+  TServerContainer = class(TForm)
+    DSHTTPService1: TDSHTTPService;
+    DSServerClass1: TDSServerClass;
+    DSServer1: TDSServer;
+    Label1: TLabel;
+    edtPorta: TEdit;
+    btnIniciaServidor: TButton;
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure DSServerClass1GetClass(DSServerClass: TDSServerClass;
+      var PersistentClass: TPersistentClass);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ServerContainer: TServerContainer;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerMethods_dm;
+
+procedure TServerContainer.DSServerClass1GetClass(DSServerClass: TDSServerClass;
+  var PersistentClass: TPersistentClass);
+begin
+  PersistentClass := TServerMethods;
+end;
+
+procedure TServerContainer.FormCreate(Sender: TObject);
+begin
+  DSServer1.Start;
+end;
+
+procedure TServerContainer.FormDestroy(Sender: TObject);
+begin
+  DSserver1.Stop;
+end;
+
+end.

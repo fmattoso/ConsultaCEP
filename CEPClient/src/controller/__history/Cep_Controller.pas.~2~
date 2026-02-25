@@ -1,0 +1,18 @@
+unit Cep_Controller;
+
+interface
+
+uses
+  System.SysUtils, CepRestService_Interface, CepRest_Service, Endereco_Model;
+
+type
+  TCepController = class
+  private
+    FService: ICepRestService;
+  public
+    constructor Create;
+    function ConsultarCep(const ACep: string): string;
+  end;
+implementation
+
+end.

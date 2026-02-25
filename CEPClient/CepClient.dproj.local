@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2026/02/25 10:33:17.000.019,=C:\Users\fabia\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/02/25 10:34:12.000.972,C:\Users\fabia\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Projetos\ConsultaCEP\CEPClient\src\view\MainForm_view.dfm</Transaction>
+    <Transaction>2026/02/25 10:34:12.000.972,C:\Users\fabia\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Projetos\ConsultaCEP\CEPClient\src\view\MainForm_view.pas</Transaction>
+    <Transaction>2026/02/25 10:34:58.000.110,C:\Users\fabia\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Projetos\ConsultaCEP\CEPClient\CepClient.dproj</Transaction>
+    <Transaction>2026/02/25 14:28:26.000.836,=C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas</Transaction>
+    <Transaction>2026/02/25 14:29:44.000.992,C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas=C:\Projetos\ConsultaCEP\CEPClient\src\interfaces\CepRestService_Interface.pas</Transaction>
+    <Transaction>2026/02/25 14:31:21.000.461,=C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas</Transaction>
+    <Transaction>2026/02/25 14:32:11.000.742,C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas=C:\Projetos\ConsultaCEP\CEPClient\src\service\CepRestService.pas</Transaction>
+    <Transaction>2026/02/25 14:40:11.000.800,=C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas</Transaction>
+    <Transaction>2026/02/25 14:40:38.000.629,C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas=C:\Projetos\ConsultaCEP\CEPClient\src\model\Endereco_Model.pas</Transaction>
+    <Transaction>2026/02/25 14:49:39.000.129,C:\Projetos\ConsultaCEP\CEPClient\src\service\CepRestService.pas=C:\Projetos\ConsultaCEP\CEPClient\src\service\CepRest_Service.pas</Transaction>
+    <Transaction>2026/02/25 14:49:53.000.504,=C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas</Transaction>
+    <Transaction>2026/02/25 14:50:11.000.582,C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas=C:\Projetos\ConsultaCEP\CEPClient\src\controller\Cep_Controller.pas</Transaction>
+    <Transaction>2026/02/25 16:43:11.000.054,=C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas</Transaction>
+    <Transaction>2026/02/25 16:43:49.000.038,C:\Projetos\ConsultaCEP\CEPClient\Unit1.pas=C:\Projetos\ConsultaCEP\CEPClient\src\WebModule.pas</Transaction>
+    <Transaction>2026/02/25 17:23:44.000.342,C:\Projetos\ConsultaCEP\CEPClient\src\WebModule.pas=</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="src"/>
+    <File Path="src\controller"/>
+    <File Path="src\controller\Cep_Controller.pas"/>
+    <File Path="src\interfaces"/>
+    <File Path="src\interfaces\CepRestService_Interface.pas"/>
+    <File Path="src\model"/>
+    <File Path="src\model\Endereco_Model.pas"/>
+    <File Path="src\service"/>
+    <File Path="src\service\CepRest_Service.pas"/>
+    <File Path="src\view"/>
+    <File Path="src\view\MainForm_view.pas"/>
+    <File Path="src\view\MainForm_view.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

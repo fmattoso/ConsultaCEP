@@ -1,0 +1,28 @@
+unit ServerContainer_view;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, IPPeerServer, Datasnap.DSCommonServer,
+  Datasnap.DSServer, Datasnap.DSHTTP;
+
+type
+  TServerContainer = class(TForm)
+    DSHTTPService1: TDSHTTPService;
+    DSServerClass1: TDSServerClass;
+    DSServer1: TDSServer;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ServerContainer: TServerContainer;
+
+implementation
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,44 @@
+unit ViaCep_Provider;
+
+interface
+
+uses
+  CepProvider_Interface;
+
+type
+  TViaCepProvider = class(TInterfacedObject, ICepProvider)
+  public
+    function Consultar(const ACep: string): string;
+  end;
+
+implementation
+
+uses
+  System.Net.HttpClient, System.SysUtils;
+
+const
+  URL_CEP = 'https://viacep.com.br/ws/%s/json';
+
+function TViaCepProvider.Consultar(const ACep: string): string;
+var
+  Http: THTTPClient;
+  Resp: IHTTPResponse;
+begin
+  Http := THTTPClient.Create;
+  try
+    Http.ConnectionTimeout := 3000;
+    Http.ResponseTimeout := 3000;
+
+    Resp := Http.Get(Format(URL_CEP, [ACep]));
+
+    if Resp.StatusCode = 200 then
+      Result := Resp.ContentAsString()
+    else
+      Result := '';
+  finally
+    Http.Free;
+  end;
+
+end;
+
+end.

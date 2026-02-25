@@ -1,0 +1,14 @@
+program CepClient;
+
+uses
+  Vcl.Forms,
+  MainForm_view in 'src\view\MainForm_view.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

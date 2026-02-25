@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{EEAA15B6-847A-4E53-B690-BF6D54ECEFF7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CEPServer\CepServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CEPClient\CepClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CepServer">
+        <MSBuild Projects="CEPServer\CepServer.dproj"/>
+    </Target>
+    <Target Name="CepServer:Clean">
+        <MSBuild Projects="CEPServer\CepServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CepServer:Make">
+        <MSBuild Projects="CEPServer\CepServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CepClient">
+        <MSBuild Projects="CEPClient\CepClient.dproj"/>
+    </Target>
+    <Target Name="CepClient:Clean">
+        <MSBuild Projects="CEPClient\CepClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CepClient:Make">
+        <MSBuild Projects="CEPClient\CepClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CepServer;CepClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CepServer:Clean;CepClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CepServer:Make;CepClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

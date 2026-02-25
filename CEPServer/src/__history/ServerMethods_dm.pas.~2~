@@ -1,0 +1,25 @@
+unit ServerMethods_dm;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TServerMethods = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ServerMethods: TServerMethods;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

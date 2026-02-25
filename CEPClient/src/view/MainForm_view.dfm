@@ -1,0 +1,99 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Consultar CEP'
+  ClientHeight = 254
+  ClientWidth = 399
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  PixelsPerInch = 96
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 16
+    Top = 24
+    Width = 24
+    Height = 15
+    Caption = 'CEP:'
+  end
+  object Label2: TLabel
+    Left = 16
+    Top = 53
+    Width = 65
+    Height = 15
+    Caption = 'Logradouro:'
+  end
+  object Label3: TLabel
+    Left = 16
+    Top = 82
+    Width = 34
+    Height = 15
+    Caption = 'Bairro:'
+  end
+  object Label4: TLabel
+    Left = 16
+    Top = 111
+    Width = 40
+    Height = 15
+    Caption = 'Cidade:'
+  end
+  object Label5: TLabel
+    Left = 16
+    Top = 140
+    Width = 17
+    Height = 15
+    Caption = 'UF:'
+  end
+  object edtCep: TEdit
+    Left = 88
+    Top = 21
+    Width = 121
+    Height = 23
+    TabOrder = 0
+    TextHint = '00000-00'
+  end
+  object btnConsultar: TButton
+    Left = 215
+    Top = 19
+    Width = 75
+    Height = 25
+    Caption = 'Consultar'
+    TabOrder = 1
+    OnClick = btnConsultarClick
+  end
+  object edtLogradouro: TEdit
+    Left = 88
+    Top = 50
+    Width = 289
+    Height = 23
+    ReadOnly = True
+    TabOrder = 2
+  end
+  object edtBairro: TEdit
+    Left = 88
+    Top = 79
+    Width = 289
+    Height = 23
+    ReadOnly = True
+    TabOrder = 3
+  end
+  object edtCidade: TEdit
+    Left = 88
+    Top = 108
+    Width = 289
+    Height = 23
+    ReadOnly = True
+    TabOrder = 4
+  end
+  object edtUF: TEdit
+    Left = 88
+    Top = 137
+    Width = 121
+    Height = 23
+    ReadOnly = True
+    TabOrder = 5
+  end
+end

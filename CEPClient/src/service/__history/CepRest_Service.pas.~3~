@@ -1,0 +1,45 @@
+unit CepRest_Service;
+
+interface
+
+uses
+  System.SysUtils, System.Net.HttpClient, CepRestService_Interface;
+
+type
+  TCepRestService = class(TInterfacedObject, ICepRestService)
+  private
+    FBaseURL: string;
+  public
+    constructor Create;
+    function Consultar(const ACep: string): string;
+  end;
+
+implementation
+
+constructor TCepRestService.Create;
+begin
+  FBaseURL := 'http://localhost:8080/datasnap/rest/TServerMethods1/ConsultarCep/';
+end;
+
+function TCepRestService.Consultar(const ACep: string): string;
+var
+  Http: THTTPClient;
+  Resp: IHTTPResponse;
+begin
+  Http := THTTPClient.Create;
+  try
+    Http.ConnectionTimeout := 3000;
+    Http.ResponseTimeout := 3000;
+
+    Resp := Http.Get(FBaseURL + ACep);
+
+    if Resp.StatusCode <> 200 then
+      raise Exception.Create('Erro ao consultar servidor');
+
+    Result := Resp.ContentAsString();
+  finally
+
+  end;
+end;
+
+end.
